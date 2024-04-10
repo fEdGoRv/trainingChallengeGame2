@@ -1,6 +1,5 @@
 import {useState, useRef} from 'react'
 
-
 export default function TimerChallenge({ title, targetTime }) {
     const timer = useRef();
     const [timerStarted, setTimerStarted] = useState(false)
@@ -16,10 +15,10 @@ export default function TimerChallenge({ title, targetTime }) {
     function handleStop(){
        clearTimeout(timer.current)
     }
-
-    <seccion className="challenge">
+  return  (
+    <section className="challenge">
         <h2>{title}</h2>
-        {timerExpired && youLost}
+        {timerExpired && 'You Lost'}
         <p className="challenge-time">
            {targetTime} second{targetTime > 1 ? 's' : ''}
         </p>
@@ -31,5 +30,5 @@ export default function TimerChallenge({ title, targetTime }) {
         <p className={timerStarted ? 'active': undefined}>
            {timerStarted ? 'Timer is Running..' : 'Timer is inactive'}
         </p>
-    </seccion>
+    </section>)
 }
