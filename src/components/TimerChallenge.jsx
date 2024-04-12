@@ -25,9 +25,8 @@ export default function TimerChallenge({ title, targetTime }) {
         dialog.current.open();
         clearInterval(timer.current)
     }
-    return (
+    return(
         <>
-
             <ResultModal
                 ref={dialog}
                 targetTime={targetTime}
